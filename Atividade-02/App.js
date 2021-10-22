@@ -1,0 +1,72 @@
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+import MeuProps from './components/MeuProps';
+import OlaMundo from './components/OlaMundo'
+import Professor from './components/Professor'
+import Professor02 from './components/Professor02';
+import Professores from './components/Professores';
+import Vindadores, { Hulk as H, Loki as L } from './components/Vingadores';
+import Cabecalho from './components/Atividade-02/Cabecalho';
+import Corpo from './components/Atividade-02/Corpo';
+import Disciplina from './components/Atividade-02/Disciplina';
+
+const foto = { uri: 'https://www.quixada.ufc.br/wp-content/uploads/2015/11/Jo%C3%A3o-225x300.png' }
+const foto2 = {uri: 'https://mir-s3-cdn-cf.behance.net/user/276/6a0f9256746153.600470ab106ea.jpg'}
+
+
+/*export default function App() {
+  return (
+    <View style={styles.container}>
+      <OlaMundo></OlaMundo>
+      <MeuProps nome='João' idade='23' curso='DD' />
+      <Professor02 foto={foto}/>
+      <Professores></Professores>
+      <StatusBar style="auto" />
+    </View>
+  );
+}*/
+
+/*export default function App() {
+  return (
+    <View style={styles.container}>
+      <H nome='Erisson'/>
+      <L nome='Carol'/>
+      <StatusBar style="auto" />
+    </View>
+  );
+}*/
+
+/*export default function App() {
+  return (
+    <View style={styles.container}>
+      <H nome='Erisson'/>
+      <L nome='Carol'/>
+      <StatusBar style="auto" />
+    </View>
+  );
+}*/
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Cabecalho nome='Erisson' curso='Design Digital'></Cabecalho>
+      <Corpo foto={foto2}></Corpo>
+      <Disciplina disciplina='Projeto de interfaces para dispositivos móveis'></Disciplina>
+      <Disciplina disciplina='Engenharia de Software'></Disciplina>
+      <Disciplina disciplina='User Experience (UX)'></Disciplina>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
