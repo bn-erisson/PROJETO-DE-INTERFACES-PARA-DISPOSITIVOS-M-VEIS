@@ -1,17 +1,17 @@
-import React, {Component} from "react";
-import { View,Text, Image} from "react-native";
+import React, { Component } from "react";
+import { View, Text, Image } from "react-native";
 
 const Hulk = (props) => {
-    return(
+    return (
         <View>
             <Text> Olá {props.nome}, eu sou o Hulk</Text>
         </View>
     )
 }
 
-class Loki  extends Component{
-    render(){
-        return(
+class Loki extends Component {
+    render() {
+        return (
             <View>
                 <Text>Olá {this.props.nome}, eu sou o Loki</Text>
             </View>
@@ -19,4 +19,4 @@ class Loki  extends Component{
     }
 }
 
-export {Hulk,Loki}
+export { Hulk, Loki }
