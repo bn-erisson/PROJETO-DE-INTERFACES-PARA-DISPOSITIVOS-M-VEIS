@@ -61,7 +61,7 @@ const foto2 = { uri: 'https://mir-s3-cdn-cf.behance.net/user/276/6a0f9256746153.
   );
 }*/
 
-/*export default function App() {
+export default function App() {
   return (
     <View style={styles.container}>
       <Cabecalho nome='Erisson' curso='Design Digital'></Cabecalho>
@@ -72,7 +72,7 @@ const foto2 = { uri: 'https://mir-s3-cdn-cf.behance.net/user/276/6a0f9256746153.
       <StatusBar style="auto" />
     </View>
   );
-}*/
+}
 
 /*export default function App() {
   return (
@@ -156,11 +156,11 @@ const foto2 = { uri: 'https://mir-s3-cdn-cf.behance.net/user/276/6a0f9256746153.
   );
 }*/
 
-export default function App() {
+/*export default function App() {
   return (
     <EntradaComBotao></EntradaComBotao>
   );
-}
+}*/
 
 const styles = StyleSheet.create({
   container: {
