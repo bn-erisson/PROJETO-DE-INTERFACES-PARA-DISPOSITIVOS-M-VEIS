@@ -6,13 +6,13 @@ import { db, addDoc, collection } from '../firebase/firebase-config'
 
 const AddUserScreen = (props) => {
 
-    const initialState = { name: '', sobrenome: '', curso: '', ira: '' }
+    const initialState = { nome: '', sobrenome: '', curso: '', ira: '' }
     const [state, setState] = useState(initialState)
 
     const addNewUser = async () => {
         try {
             await addDoc(collection(db, "users"), {
-                name: state.name,
+                nome: state.nome,
                 sobrenome: state.sobrenome,
                 curso: state.curso,
                 ira: state.ira
@@ -23,8 +23,8 @@ const AddUserScreen = (props) => {
         }
     }
 
-    const handleChangeTex = (value, name) => {
-        setState({ ...state, [name]: value })
+    const handleChangeTex = (value, nome) => {
+        setState({ ...state, [nome]: value })
     }
 
     return (
@@ -41,9 +41,9 @@ const AddUserScreen = (props) => {
                         padding: 10,
                         alignSelf: 'center'
                     }}
-                    placeholder='Name'
-                    value={state.name}
-                    onChangeText={(value) => handleChangeTex(value, 'name')}
+                    placeholder='Nome'
+                    value={state.nome}
+                    onChangeText={(value) => handleChangeTex(value, 'nome')}
                 />
             </View>
             <View style={styles.textInput}>

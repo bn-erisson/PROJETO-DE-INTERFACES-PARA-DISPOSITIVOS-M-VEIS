@@ -53,7 +53,7 @@ const ListUserScreen =(props)=>{
                                 }}
                             />
                                  <ListItem.Content>
-                                     <ListItem.Title>{user.name}</ListItem.Title>
+                                     <ListItem.Title>{user.nome}</ListItem.Title>
                                      <ListItem.Subtitle>{user.sobrenome}</ListItem.Subtitle>
                                      <ListItem.Subtitle>{user.curso}-{user.ira}</ListItem.Subtitle>
                                  </ListItem.Content>  

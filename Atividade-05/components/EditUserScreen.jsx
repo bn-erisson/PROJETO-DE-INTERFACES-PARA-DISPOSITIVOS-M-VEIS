@@ -5,7 +5,7 @@ import { ScrollView, TextInput } from 'react-native-gesture-handler';
 import { db, getDoc, doc, deleteDoc, updateDoc } from '../firebase/firebase-config'
 
 const EditUserScreen = (props) => {
-    const initialState = { id: '', name: '', sobrenome: '', curso: '', ira: '' }
+    const initialState = { id: '', nome: '', sobrenome: '', curso: '', ira: '' }
     const [user, setUser] = useState(initialState)
 
     useEffect(() => {
@@ -31,7 +31,7 @@ const EditUserScreen = (props) => {
 
     const updateUser = async () => {
         await updateDoc(doc(db, "users", user.id), {
-            name: user.name,
+            nome: user.nome,
             sobrenome: user.sobrenome,
             curso: user.curso,
             ira: user.ira
@@ -53,9 +53,9 @@ const EditUserScreen = (props) => {
                         padding: 10,
                         alignSelf: 'center'
                     }}
-                    placeholder='Name'
-                    value={user.name}
-                    onChangeText={(value) => handleChangeText(value, 'name')}
+                    placeholder='Nome'
+                    value={user.nome}
+                    onChangeText={(value) => handleChangeText(value, 'nome')}
                 />
 
             </View>
